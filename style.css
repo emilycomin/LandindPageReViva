@@ -9,10 +9,10 @@ body{
 }
 header{
     background-color: #411B28;
-    height: 180px;
+    height: 280px;
     display: flex;
+    flex-direction: column;
     box-shadow: rgba(191, 135, 50, 0.652) 0px 3px 8px;
-  
     position: relative;
 }
 nav{
@@ -30,7 +30,7 @@ li > a {
     margin: 15px 15px;
     display: flex;
     justify-content: flex-start;
-    margin: 15px 15px;
+    -webkit-margin-top-collapse;: 15px
 }
 
 nav > a:hover{
@@ -47,13 +47,13 @@ nav > a:hover{
     font-size: 2.75rem;
 }
 img{
-    height: 12rem;
-    width: 12em;
-    border-radius: 999px;
+    height: 10rem;
+    width: 10em;
+    border-radius: 9999px;
     box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
     position: absolute;
-    top: 30px;
-    right: 20px;
+    top: 10px;
+    right: 0px;
 }
 
 
