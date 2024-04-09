@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Fonts google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
@@ -9,19 +10,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviva</title>
-   <link rel="stylesheet" href="./index.css"/>
+   <link rel="stylesheet" media="(max-width: 600px)" href="./style.css"/>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#Home" >Home</a>
-            <a href="#aClinica" >A clinica</a>
-            <a href="Home"><img src="./img/LogoMenorReviva.jpg" alt="" class="imgLogo"></a>
-            <a href="#Procedimentos" >Procedimentos</a>
-            <a href="#Contato" >Contato</a>
+        <i class="ph ph-list" id="dropDownMenu" onclick="dropDownMenu()"></i>
+        <nav id="menu">
+            <ul>
+                <li><a href="#Home" >Home</a></li>
+                <li><a href="#aClinica" >A clinica</a></li>
+                <li><a href="#Procedimentos" >Procedimentos</a></li>
+                <li><a href="#Contato" >Contato</a></li>
+            </ul>
           </nav>
+          <img src="./img/LogoMenorReviva.jpg" alt="" class="imgLogo">
     </header>
     <div id="Home">
     </div>
@@ -32,8 +38,16 @@
        
     </div>
     <div id="Contato">
-      
-
+    
     </div>
+   <script>
+    function dropDownMenu(){
+        if(menu.style.display == "block" ){
+            menu.style.display = "none"
+        } else{
+            menu.style.display = "block"
+        }
+    }
+   </script>
 </body>
 </html>
