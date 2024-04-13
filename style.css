@@ -1,62 +1,201 @@
 *{
     margin: 0;
     padding: 0;
+    border: border-box;
 }
+
+/* ------------------------------MOBILE FIRST -------------- */
+/* ________________________________HEADER___________________ */
 body{
     background-color: #F7E8E0;
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 200;
+    font-weight: 500;
 }
 header{
     background-color: #411B28;
-    height: 280px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(191, 135, 50, 0.652) 0px 3px 8px;
-    position: relative;
-}
-nav{
-    height: 150px;
+    border-radius: 0 0 1rem 1rem;
+    position: fixed;
+    top: 0;
     width: 100%;
-    display: none;
+}
+.navBarDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.navBarDiv>div{
+    margin-top: 2rem;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 0;
 }
 li {
     list-style-type: none;
+    height: 30px;
+
   }
 li > a {
     text-decoration: none;
     color: #F7E8E0;
     font-size: 1.5rem;
-    margin: 15px 15px;
     display: flex;
-    justify-content: flex-start;
-    -webkit-margin-top-collapse;: 15px
+    font-family: "Raleway", sans-serif;
+    
 }
-
-nav > a:hover{
-    border-bottom: #F7E8E0 1px solid;
+li>a:hover{
+    border-bottom: 1px solid #F7E8E0;
+    transition: all 0.2s ease-out;
 }
-#dropDownMenu{
-    font-size: 2.5rem;
-    color: #F7E8E0;
-    cursor: pointer;
-    display: block;
-    margin: 20px 30px;
-}
-#dropDownMenu:hover{
-    font-size: 2.75rem;
-}
-img{
-    height: 10rem;
-    width: 10em;
+.imgHeader{
+    height: 150px;
+    width: 150px;
     border-radius: 9999px;
     box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
-    position: absolute;
-    top: 10px;
-    right: 0px;
+}
+/* --------------------------BODY CONTENT------------------------ */
+.homeContent{
+    width: 100%;
+    background-image: url("./img/4030209_85148.jpg");
+    background-repeat: round;
+}
+.bodyContent{
+    margin-top: 280px;
+    font-family: "Lato", sans-serif;
+}
+/* ---------------------------PROCEDIMENTOS------------------------ */
+.procedimentos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.cardProcedimento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 350px;
+    height: 400px;
+    border: 1px solid #ede8ea;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: rgba(191, 135, 50, 0.3) 0px 10px 10px;
+}
+.cardProcedimentoContent > p{
+   text-align: justify;     
+}
+.cardImg {
+    height: 150px;
+    width: 150px;
+    border-radius: 30px;
+}
+ /* ---------------------------CONTATO----------------------- */
+ .mapouter{
+    padding: 20px;
+    border-radius: 8px;
+    height: 150px;
+    width: 150px;
 }
 
+#Contato{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media only screen and (min-width:760px) {
+/* ________________________________HEADER___________________ */
+    header{
+        height: 150px;
+    }
+    .navBarDiv{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 180px;
+ 
+    }
+    .navBarLinks{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .navBarLinks>ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+   li>a:hover{
+        border-bottom: 1px solid #F7E8E0;
+        transition: all 0.2s ease-in;
+    }
+    .imgHeader{
+        border-radius: 9999px;
+        box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
+        cursor: pointer;
+    }
+    
+    /* ---------------------------BODY------------------------------ */
+    .homeContent{
+        width: 100%;
+        height: 500px;
+        background-image: url("./img/4030209_85148.jpg");
+        background-repeat: round;
+    }
+    .bodyContent{
+        margin-top: 200px;
+        font-family: "Lato", sans-serif;
+    }
+    /* ----------------------PROCEDIMENTOS--------------------------- */
+    .procedimentos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .cardProcedimento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 350px;
+        height: 400px;
+        border: 1px solid #ede8ea;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: rgba(191, 135, 50, 0.3) 0px 10px 10px;
+    }
+    .cardProcedimentoContent > p{
+       text-align: justify;        
+    }
+    .cardImg {
+        height: 150px;
+        width: 150px;
+        border-radius: 30px;
+    }
+    /* ---------------------------CONTATO----------------------- */
+    .mapouter{
+        padding: 20px;
+        border-radius: 8px;
+    }
+    #Contato{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-@media screen and (min-width: 600px) {
-   
 }

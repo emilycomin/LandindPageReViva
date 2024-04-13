@@ -1,53 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- Fonts google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/jpg" href="./img/Reviva.jpg"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/jpg" href="./img/Reviva.jpg" />
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link src="./style.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reviva</title>
-   <link rel="stylesheet" media="(max-width: 600px)" href="./style.css"/>
-</head>
-<body>
-    <header>
-        <i class="ph ph-list" id="dropDownMenu" onclick="dropDownMenu()"></i>
-        <nav id="menu">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header >
+      <nav>
+        <div class="navBarDiv">
+          <a href="#Home"><img src="./img/LogoMenorReviva.jpg" class="imgHeader"/></a>
+          <div class="navBarLinks">
             <ul>
-                <li><a href="#Home" >Home</a></li>
-                <li><a href="#aClinica" >A clinica</a></li>
-                <li><a href="#Procedimentos" >Procedimentos</a></li>
-                <li><a href="#Contato" >Contato</a></li>
+              <li><a href="#Home">Página inicial</a></li>
+              <li><a href="#" >Procedimentos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Botox</a></li>
+                  <li><a class="dropdown-item" href="#">Preenchimento</a></li>
+                  <li><a class="dropdown-item" href="#">Lipo de papada</a></li>
+                  <li><a class="dropdown-item" href="#">Tratamento de Cabelo</a></li>
+                </ul>
+              </li>
+              <li><a href="#aClinica">A clinica</a></li>
+              <li><a href="#Contato">Contato</a></li>
             </ul>
-          </nav>
-          <img src="./img/LogoMenorReviva.jpg" alt="" class="imgLogo">
+          </div>
+        </div>
+      </nav>
     </header>
-    <div id="Home">
-    </div>
-    <div id="aClinica">
+    <main class="bodyContent">
+      <div id="Home">
+        <div class="homeContent">
        
+        </div>
+      </div>
+      <div clas="aClinica"></div>
+      <div class="procedimentos" id="Procedimentos">
+        <div class="cardProcedimento">
+          <h1>Botox</h1>
+          <div class="cardProcedimentoContent">
+            <p>texto explicando o que faz o botox na pele da paciente Lorem ipsum dolor
+             sit amet consectetur adipisicing elit.
+             Voluptas, consectetur. Quas cupiditate.</p>
+             <img class="cardImg"   src="./img/resultadoBotox.jpg" alt="">
+          </div>
+          </div>
+        <div class="cardProcedimento">
+          <h1>Preenchimentos</h1>
+          <div class="cardProcedimentoContent">
+            <p>Os preenchimentos são realizados em áreas específicas, 
+              pode ser em vários pontos do rosto. Com pequenos ajustes é possível ver diferenças significantes</p>
+             <img class="cardImg" src="./img/resultadoBigodeChines.jpg"/>
+             <img class="cardImg" src="./img/ResultadoOlheiras.jpg" />
+          </div>
+        </div>
+        <div class="cardProcedimento">
+          <h1>Lipo de Papada</h1>
+          <div class="cardProcedimentoContent">
+            <p>texto explicando o que faz o botox na pele da paciente Lorem ipsum dolor
+             sit amet consectetur adipisicing elit.
+             Voluptas, consectetur. Quas cupiditate.</p>
+             <img class="cardImg" src="./img/ResultadoLipoPapada.jpg" alt="">
+          </div>
+        </div>
+        <div class="cardProcedimento">
+          <h1>Tratamento Capilar</h1>
+          <div class="cardProcedimentoContent">
+            <p>texto explicando o que faz o botox na pele da paciente Lorem ipsum dolor
+             sit amet consectetur adipisicing elit.
+             Voluptas, consectetur. Quas cupiditate.</p>
+             <img class="cardImg" src="./img/LogoMenorReviva.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div id="Contato">
+        <p>Estamos localizados na Rua Inácio Vasconcelos, nº 59, clínica 405. No Axis Ttriple Bussines ao lado do Hotel Lagetho Stilo</p>
+        <div> 
+          <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+            <a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=555193403002&text=Ol%C3%A1,%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos!%20">
+              <div class="rwb-tooltip">Marque uma avaliação comigo!</div>
+              <img  src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg"> 
+            </a>
+        </div>
+        <div class="googleMaps">
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe width="615" height="349" border="none" id="gmap_canvas" src="https://maps.google.com/maps?q=rua+inacio+vasconcelos%2C+59%2C+405&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="yes" marginheight="30" marginwidth="30"></iframe>
+              <br>
+            </div>
+        </div>
+      </div>
     </div>
-    <div id="Procedimentos"> 
-       
-    </div>
-    <div id="Contato">
-    
-    </div>
-   <script>
-    function dropDownMenu(){
-        if(menu.style.display == "block" ){
-            menu.style.display = "none"
-        } else{
-            menu.style.display = "block"
+
+    </main>
+    <footer>
+
+      Redes sociais
+      cnpj, razão social
+
+    </footer>
+    <script>
+      function dropDownMenu() {
+        if (menu.style.display == "block") {
+          menu.style.display = "none";
+        } else {
+          menu.style.display = "block";
         }
-    }
-   </script>
-</body>
+      }
+    </script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
 </html>
