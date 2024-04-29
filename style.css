@@ -3,21 +3,28 @@
     padding: 0;
     border: border-box;
 }
+:root{
+    --força: #411c29;
+    --feminilidade: #a55974;
+    --feminilidade2: #a55974c2;
+    --luxo: #cc8b2b;
+    --beleza: #fcf5e3;
+    --beleza2: #f7f5ef;
+    --elegancia: #e0bf47;
+
+}
 
 /* ------------------------------MOBILE FIRST -------------- */
 /* ________________________________HEADER___________________ */
 body{
-    background-color: #F7E8E0;
+   background-color: var(--beleza2);
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 500;
 }
 header{
-    background-color: #411B28;
-    height: 200px;
+    background-color: var(--força);
+    height: 120px;
     display: flex;
     justify-content: space-around;
-    box-shadow: rgba(191, 135, 50, 0.652) 0px 3px 8px;
-    border-radius: 0 0 1rem 1rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -44,9 +51,7 @@ header nav a{
     transition: all 0.2s ease;
 }
 header nav a:hover{
-    background-color: #F7E8E0;
-    border-radius: 50px;
-    color: #411B28;
+    border-bottom: 1px solid var(--beleza) ;
     transition: all 0.5s ease;
 }
 input:checked ~ nav{
@@ -56,7 +61,7 @@ input{
     display: none;
 }
 .menu{
-    color: #F7E8E0;
+    color: var(--beleza);
    display: block;
    height: 60px;
    font-size: 4rem;
@@ -78,121 +83,137 @@ input:checked ~ .menu .ph-x{
     display: block;
 }
 .imgHeader{
-    height: 200px;
-    width: 200px;
-    border-radius: 9999px;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 999px 999px;
     box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
 }
 
 /* --------------------------BODY CONTENT------------------------ */
 
-.bodyContent{
-    margin-top: 240px;
-}
-.homeContent{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;    
-}
-.fotosRenata{
-    display: flex;
-    width: 100%; 
-    height: 550px;
-    z-index: -1;
-}
-.fotosRenata img{
-    filter: blur(2px);
-}
-.homeContent > img{
-    position: absolute;
-    height: 300px;
-    bottom: 0;
-}
-.homeContent #ramoEsquerdo{
-    left: 0;
-}
-.homeContent #ramoDireito{
-    right: 0;
-}
-.homeContent h1{
-    position: absolute;
-    color: #411B28;
-    text-align: center;
-    z-index: 3;
-    background-color: #F7E8E0;
-    padding: 20px;
-    border-radius: 8px;
-    transform: translate(0%, 70%);
-    font-weight: 700;
-}
-
-/* ---------------------------PROCEDIMENTOS------------------------ */
-.procedimentos{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-.cardProcedimento{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    width:100%;
-    height: 400px;
-    border-radius: 8px;
-    padding: 5px;
-    box-shadow: rgba(191, 135, 50, 0.3) 0px 10px 10px;
-}
-.cardProcedimentoContent{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.cardProcedimentoContent > p{
-   text-align: justify;     
-}
-.cardImg {
-    height: 150px;
-    width: 150px;
-    border-radius: 30px;
-}
- /* ---------------------------CONTATO----------------------- */
- .mapouter{
-    padding: 20px;
-    border-radius: 8px;
-    height: 150px;
-    width: 150px;
-}
-#Contato{
-    margin-top: 30px;
+#Home{
+    overflow: hidden;
+    background-color: var(--força);
+    height: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    z-index: -1;
+    position: relative;
+    margin: 120px 0 30px 0;
+}
+.homeContent {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 0 auto;
+}
+.texto {
+   color: var(--beleza);
+   padding: 20px;
+   background-color: var(--feminilidade2);
+   top: 30%;
+   position: absolute;
+   width: 300px;
+}
+.imagemRenataCapa{
+    height: 300px;
+    margin-left: 50%;
+}
+#ramoDireito, #ramoEsquerdo{
+    position: absolute;
+    height: 300px;
+}
+ #ramoEsquerdo{
+    left: 0px;
+    bottom: 5px;
+}
+#ramoDireito{
+    right: 0px;
+    top:0;
+}
+/* ---------------------------PROCEDIMENTOS------------------------ */
+.procedimentos{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+.procedimentos > h1{
+    color: rgba(192, 189, 189, 0.29);
+    font-size: 5rem;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    transition: all 0.2s;
+}
+.cardProcedimento{
+   height: 270px;
+   width: 200px;
+   border-radius: 20rem 20rem 0 0;
+   border: var(--luxo) solid 1px;
+   box-shadow: var(--feminilidade2) 10px 10px 2px 3px;
+}
+.cardProcedimento>img{
+    height: 270px;
+    width: 200px;
+    border-radius: 20rem 20rem 0 0;
+}
+.procedimentos div> h1{
+    max-width: 200px ;
+    color: var(--luxo);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+ /* ---------------------------CONTATO----------------------- */
+#Contato{
+    display: flex;
+    flex-direction: column;
+}
+.informacoesContato{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #a55974;
+}.botoesRedesSociais{
+    display: flex;
 }
 
+
+footer{
+    background-image: url(/img/wave.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #F7E8E0;
+    padding: 30px;
+}
 
 /* ------------------TELA ACIMA DE 760PX ------------------ */
 @media only screen and (min-width:760px) {
 /* ________________________________HEADER___________________ */
     header{
-        height: 150px;
-    }
-    header nav{
         display: flex;
         flex-direction: row;
-        font-weight: 600;
-        gap: 50px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav{
+        overflow: visible;
+        flex-direction: row;
     }
     .imgHeader{
-        border-radius: 9999px;
         box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
         cursor: pointer;
         height: 200px;
         width: 200px;
+        margin: 50px 0 0 90px;
     }
     input{
         display: none;
@@ -201,80 +222,30 @@ input:checked ~ .menu .ph-x{
         display: none;
     }
     /* ---------------------------BODY------------------------------ */
-    
-     .bodyContent{
-        margin-top: 155px;
-        font-weight: 700;
+    #Home{
+        height: 100%;
     }
     .homeContent{
-        display: flex;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;    
+        width: 80vw;
     }
-    .fotosRenata{
-        display: flex;
-        width: 100%; 
-        height: 550px;
-        z-index: -1;
+    .texto{
+        width: 300px;
     }
-    .fotosRenata img{
-        filter: blur(2px);
+    .imagemRenataCapa{
+        height: 500px;
     }
-    .homeContent > img{
-        position: absolute;
-        height: 300px;
-        bottom: 0;
-    }
-    .homeContent #ramoEsquerdo{
-        left: 0;
-    }
-    .homeContent #ramoDireito{
-        right: 0;
-    }
-    .homeContent h1{
-        position: absolute;
-        color: #411B28;
-        text-align: center;
-        z-index: 3;
-        background-color: #F7E8E0;
-        padding: 20px;
-        border-radius: 8px;
-        transform: translate(0%, 70%);
-        font-weight: 700;
-    }
-
+        
     /* ----------------------PROCEDIMENTOS--------------------------- */
     .procedimentos{
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        gap: 20px;
+       display: flex;
+       flex-flow: row wrap;
+       width: 70%;
+       gap: 50px;
+       margin: 0 auto;
+       align-items: center;
+       justify-content: center;
     }
-    .cardProcedimento{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        width:100%;
-        height: 320px;
-        border-radius: 8px;
-        box-shadow: rgba(191, 135, 50, 0.3) 0px 10px 10px;
-    }
-    .cardProcedimentoContent{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .cardProcedimentoContent > p{
-       text-align: justify;        
-    }
-    .cardImg {
-        height: 300px;
-        width: 300px;
-        border-radius: 30px;
-    }
+    
     /* ---------------------------CONTATO----------------------- */
     .mapouter{
         padding: 20px;

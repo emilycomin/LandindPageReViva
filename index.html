@@ -37,93 +37,111 @@
           <i class="ph ph-x"></i>
         </div>
         <nav>
-          <a href="#Home">Página inicial</a>
+          <a href="#Home">Início</a>
           <a href="#Procedimentos" >Procedimentos</a>
-          <a href="#aClinica">A clinica</a>
           <a href="#Contato">Contato</a>
       </nav>
     </header>
     <main class="bodyContent">
+      
       <div id="Home">
+        <img src="/img/ramoEsquerda.png" id="ramoEsquerdo">
         <div class="homeContent">
-          <h1>Proporcionando autoestima</h1>
-          <img src="/img/ramoEsquerda.png" id="ramoEsquerdo">
-          <div class="fotosRenata">
-            <img src="/img/FotoRenata.jpg" alt="">
-            <img src="/img/fotoRenata (2).jpg" alt="">
-            <img src="/img/fotoRenata3.jpg" alt="">
-            <img src="/img/fotoRenata2.jpg" alt="">
+          <div class="texto">
+            <h1>Ajudo mulheres a se sentirem confiantes através da autoestima!</h1>
           </div>
-          <img src="/img/ramoDireita.png" id="ramoDireito">
+          <img src="./img/Renata.jpg" class="imagemRenataCapa">
         </div>
+        <img src="/img/ramoDireita.png" id="ramoDireito">
       </div>
-      <div clas="aClinica"></div>
       <div class="procedimentos" id="Procedimentos">
-        <div class="cardProcedimento">
-          <div class="cardProcedimentoContent">
-          <h1>Botox</h1>
-            <p>texto explicando o que faz o botox na pele da paciente Lorem ipsum dolor
-             sit amet consectetur adipisicing elit.
-             Voluptas, consectetur. Quas cupiditate.</p>
-            </div>
-            <img class="cardImg"   src="./img/resultadoBotox.jpg" alt="">
+        <h1 id="tituloProcedimento">PROCEDIMENTOS</h1>
+
+      <div>
+          <div class="cardProcedimento">
+            <img src="/img/toxinaButolinica.jpg">
           </div>
-        <div class="cardProcedimento">
-          <img class="cardImg" src="./img/resultadoBigodeChines.jpg"/>
-          <img class="cardImg" src="./img/ResultadoOlheiras.jpg" />
-          <div class="cardProcedimentoContent">
+          <h1>Toxína Butolinica</h1>
+        </div>
+        <div>
+          <div class="cardProcedimento">
+            <img src="/img/bioetimuladorColageno.jpeg">
+          </div>
+          <h1>Biestimulador de Colágeno</h1>
+        </div>
+        <div>
+          <div class="cardProcedimento">
+            <img src="/img/preenchimentoLabial.jpg">
+          </div>
           <h1>Preenchimentos</h1>
-            <p>Os preenchimentos são realizados em áreas específicas, 
-              pode ser em vários pontos do rosto. Com pequenos ajustes é possível ver diferenças significantes</p>
-            </div>
         </div>
-        <div class="cardProcedimento">
-          <div class="cardProcedimentoContent">
-          <h1>Lipo de Papada</h1>
-            <p>texto explicando o que faz o botox na pele da paciente Lorem ipsum dolor
-             sit amet consectetur adipisicing elit.
-             Voluptas, consectetur. Quas cupiditate.</p>
-            </div>
-            <img class="cardImg" src="./img/ResultadoLipoPapada.jpg" alt="">
+        <div>
+          <div class="cardProcedimento">
+            <img src="/img/fotoRenata5.jpg">
+          </div>
+          <h1>Lipo de Papada Enzimática</h1>
+        </div> 
+        <div>
+          <div class="cardProcedimento">
+            <img src="/img/melasma.jpg">
+          </div>
+          <h1>Tratamento de Melasma</h1>
         </div>
-        <div class="cardProcedimento">
-          <img class="cardImg" src="./img/LogoMenorReviva.jpg" alt="">
-          <div class="cardProcedimentoContent">
-          <h1>Tratamento Capilar</h1>
-            <p>texto explicando o que faz o botox na pele da paciente Lorem ipsum dolor
-             sit amet consectetur adipisicing elit.
-             Voluptas, consectetur. Quas cupiditate.</p>
-            </div>
+        <div>
+          <div class="cardProcedimento">
+            <img src="/img/microagulhamento.jpg">
+          </div>
+          <h1>Microagulhamento</h1>
+        </div>
+        <div>
+          <div class="cardProcedimento">
+            <img src="/img/tratamentoCapilar.jpg">
+          </div>
+          <h1>Tratamentos capilares</h1>
         </div>
       </div>
+
+
       <div id="Contato">
-        <p>Estamos localizados na Rua Inácio Vasconcelos, nº 59, clínica 405. No Axis Ttriple Bussines ao lado do Hotel Lagetho Stilo</p>
+        <div class="informacoesContato">
+          
+          <h1>Dra Renata Vargas</h1>
+          <h2>Coren/RS 067.671</h2>
+          <p>Estamos localizados na Rua Inácio Vasconcelos, nº 59, clínica 405.
+            Em um hambiente acolhedor, reservado e pensado nos mínimos detalhes para te receber com toda a atenção e carainho que você merece.
+            Visite a clinica, agende seu horário pelo whatsapp.
+          </p>
+          <div class="botoesRedesSociais">
+            <button> Instagram</button>
+            <button>whatsapp</button>
+          </div>
+        </div>
         <div> 
+          <!-------------------------------------- BOTÃO DO WHATSAPP -->
           <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
             <a id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=555193403002&text=Ol%C3%A1,%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos!%20">
               <div class="rwb-tooltip">Marque uma avaliação comigo!</div>
               <img  src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg"> 
             </a>
         </div>
+        <!-- -------------------------------------GOOGLE MAPS -->
         <div class="googleMaps">
           <div class="mapouter">
             <div class="gmap_canvas">
-              <iframe width="615" height="349" border="none" id="gmap_canvas" src="https://maps.google.com/maps?q=rua+inacio+vasconcelos%2C+59%2C+405&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="yes" marginheight="30" marginwidth="30"></iframe>
+              <iframe border="none" id="gmap_canvas" src="https://maps.google.com/maps?q=rua+inacio+vasconcelos%2C+59%2C+405&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="yes" marginheight="30" marginwidth="30"></iframe>
               <br>
             </div>
         </div>
+
+
       </div>
     </div>
-
     </main>
     <footer>
-
-      Redes sociais
-      cnpj, razão social
-
+      
+      <p>CNPJ: 46876572/0001-30 - Reviva Saude E Bem Estar Servicos <br>De Enfermagem Ltda</p>
+      <i class="ph ph-instagram-logo"></i> 
     </footer>
    <script src="/script.js"></script>
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
