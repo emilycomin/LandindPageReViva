@@ -18,18 +18,21 @@
 /* ________________________________HEADER___________________ */
 body{
    background-color: var(--beleza2);
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+h1{
+    font-family: "Marcellus", serif;
 }
 header{
     background-color: var(--força);
     height: 120px;
     display: flex;
     justify-content: space-around;
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 5;
 }
+
 header nav{
     background-color: #411b28a0;
     position: absolute;
@@ -45,11 +48,11 @@ header nav{
 }
 header nav a{
     text-decoration: none;
+    font-size: 1.25rem;
     color: #F7E8E0;
     padding: 1rem;
-    font-size: 2rem;
     transition: all 0.2s ease;
-}
+} 
 header nav a:hover{
     border-bottom: 1px solid var(--beleza) ;
     transition: all 0.5s ease;
@@ -81,7 +84,7 @@ input:checked ~ .menu .ph-list{
 }
 input:checked ~ .menu .ph-x{
     display: block;
-}
+} 
 .imgHeader{
     height: 150px;
     width: 150px;
@@ -102,12 +105,10 @@ input:checked ~ .menu .ph-x{
     padding: 30px 50px;
     z-index: -1;
     position: relative;
-    margin: 120px 0 30px 0;
 }
 .homeContent {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
     margin: 0 auto;
 }
 .texto {
@@ -117,6 +118,8 @@ input:checked ~ .menu .ph-x{
    top: 30%;
    position: absolute;
    width: 300px;
+   display: flex;
+   align-items: center;
 }
 .imagemRenataCapa{
     height: 300px;
@@ -136,44 +139,42 @@ input:checked ~ .menu .ph-x{
 }
 /* ---------------------------PROCEDIMENTOS------------------------ */
 .procedimentos{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
     position: relative;
 }
-.procedimentos > h1{
+#tituloProcedimento{
     color: rgba(192, 189, 189, 0.29);
-    font-size: 5rem;
+    font-size: 3.25rem;
     position: absolute;
     z-index: -1;
     top: 0;
     transition: all 0.2s;
 }
 .cardProcedimento{
-   height: 270px;
-   width: 200px;
-   border-radius: 20rem 20rem 0 0;
-   border: var(--luxo) solid 1px;
-   box-shadow: var(--feminilidade2) 10px 10px 2px 3px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 100%;
+    gap: 20px;
 }
 .cardProcedimento>img{
-    height: 270px;
-    width: 200px;
+    height: 180px;
+    width: 150px;
     border-radius: 20rem 20rem 0 0;
 }
-.procedimentos div> h1{
-    max-width: 200px ;
+.cardProcedimentoTexto{
     color: var(--luxo);
-    text-align: center;
-    font-size: 1.5rem;
     margin-top: 20px;
+}
+.cardProcedimento:last-child{
+    margin-bottom: 50px;
 }
  /* ---------------------------CONTATO----------------------- */
 #Contato{
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
+    background-color: #e9d488;
+    background-image: linear-gradient(18deg, #e9d488 0%, #f7f5ef 23%, #ffffff 84%);
 }
 .informacoesContato{
     padding: 20px;
@@ -182,17 +183,37 @@ input:checked ~ .menu .ph-x{
     align-items: center;
     gap: 15px;
     color: #a55974;
-}.botoesRedesSociais{
+}
+.botoesRedesSociais{
     display: flex;
+    gap: 40px;
+}
+.botoesRedesSociais button{
+    background-color: transparent;
+    border: none;
+    font-size: 4rem;
+    color: var(--feminilidade); 
+}
+.botoesRedesSociais a{
+    text-decoration: none;
+    transition: all .2s ease-out;
+}
+.botoesRedesSociais a:visited{
+    color: var(--força);
+}
+.botoesRedesSociais a:hover{
+    color: var(--luxo);
 }
 
+.googleMaps{
+    margin:  0 auto 30px auto;
+}
 
 footer{
-    background-image: url(/img/wave.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
     color: #F7E8E0;
     padding: 30px;
+    background-color: var(--força);
+   box-shadow: rgba(38, 223, 66, 0.652) 0px 10px 10px;
 }
 
 /* ------------------TELA ACIMA DE 760PX ------------------ */
@@ -224,17 +245,29 @@ footer{
     /* ---------------------------BODY------------------------------ */
     #Home{
         height: 100%;
+        margin-bottom: 50px;
     }
     .homeContent{
         width: 80vw;
+        background-image: url(/img/bacgroundReviva.png);
+        background-repeat: repeat-x;
+        background-position: 30px;
     }
     .texto{
         width: 300px;
+        height: 250px;
     }
     .imagemRenataCapa{
-        height: 500px;
+        height: 480px;
     }
-        
+    #ramoEsquerdo{
+        left: 10px;
+        bottom: 35px;
+    }
+    #ramoDireito{
+        right: 10px;
+        top:0;
+    }
     /* ----------------------PROCEDIMENTOS--------------------------- */
     .procedimentos{
        display: flex;
@@ -245,7 +278,15 @@ footer{
        align-items: center;
        justify-content: center;
     }
-    
+    #tituloProcedimento{
+        font-size: 5rem;
+        
+    }
+
+    .aReviva{
+        height: 300px;
+        background-color: var(--força);
+    }
     /* ---------------------------CONTATO----------------------- */
     .mapouter{
         padding: 20px;
