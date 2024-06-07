@@ -28,13 +28,11 @@ header{
     height: 120px;
     display: flex;
     justify-content: space-around;
-    top: 0;
     width: 100%;
-    z-index: 5;
 }
 
 header nav{
-    background-color: #411b28a0;
+    background-color: #411b28e9;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -139,31 +137,40 @@ input:checked ~ .menu .ph-x{
 }
 /* ---------------------------PROCEDIMENTOS------------------------ */
 .procedimentos{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     position: relative;
 }
+
 #tituloProcedimento{
     color: rgba(192, 189, 189, 0.29);
-    font-size: 3.25rem;
+    font-size: 2rem;
     position: absolute;
-    z-index: -1;
-    top: 0;
     transition: all 0.2s;
+    top: 0;
 }
 .cardProcedimento{
+    width: 400px;
+    background-color: #cc8b2b;
+    padding: 20px;
+}
+.cardProcedimentoContent> img{
+    width: 200px;
+    height: 280px;
+    border-radius: 99px 99px 0 0 ;
+    margin-bottom: 30px;
+}
+.cardProcedimentoContent{
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    width: 100%;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--beleza2);
+    gap: 10px;
 }
-.cardProcedimento>img{
-    height: 180px;
-    width: 150px;
-    border-radius: 20rem 20rem 0 0;
-}
-.cardProcedimentoTexto{
-    color: var(--luxo);
-    margin-top: 20px;
+.cardProcedimentoContent > p {
+   text-align: justify;
+   padding: 20px;
 }
 .cardProcedimento:last-child{
     margin-bottom: 50px;
@@ -174,7 +181,12 @@ input:checked ~ .menu .ph-x{
     flex-direction: column;
     margin-bottom: 30px;
     background-color: #e9d488;
-    background-image: linear-gradient(18deg, #e9d488 0%, #f7f5ef 23%, #ffffff 84%);
+    background-image: linear-gradient(18deg, #e9d488 0%, #f7f5ef 23%, #f7f5ef 84%);     
+}
+#Contato>img{
+    height: 100px;
+    width: 100px;
+    align-self: center;
 }
 .informacoesContato{
     padding: 20px;
@@ -183,6 +195,9 @@ input:checked ~ .menu .ph-x{
     align-items: center;
     gap: 15px;
     color: #a55974;
+}
+.informacoesContato p{
+    text-indent: 2rem;
 }
 .botoesRedesSociais{
     display: flex;
@@ -272,7 +287,7 @@ footer{
     .procedimentos{
        display: flex;
        flex-flow: row wrap;
-       width: 70%;
+       width: 99%;
        gap: 50px;
        margin: 0 auto;
        align-items: center;
@@ -280,14 +295,14 @@ footer{
     }
     #tituloProcedimento{
         font-size: 5rem;
-        
     }
 
+    /* ---------------------------------A CLINICA-------------------------- */
     .aReviva{
         height: 300px;
         background-color: var(--força);
     }
-    /* ---------------------------CONTATO----------------------- */
+    /* ---------------------------CONTATO------------------------------- */
     .mapouter{
         padding: 20px;
         border-radius: 8px;
