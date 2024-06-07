@@ -18,7 +18,7 @@
 /* ________________________________HEADER___________________ */
 body{
    background-color: var(--beleza2);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Teachers", sans-serif;
 }
 h1{
     font-family: "Marcellus", serif;
@@ -27,8 +27,7 @@ header{
     background-color: var(--força);
     height: 120px;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    gap: 30%;
 }
 
 header nav{
@@ -95,7 +94,7 @@ input:checked ~ .menu .ph-x{
 #Home{
     overflow: hidden;
     background-color: var(--força);
-    height: 100%;
+    height: 400px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -139,47 +138,56 @@ input:checked ~ .menu .ph-x{
 .procedimentos{
     display: flex;
     flex-direction: column;
+    gap: 10px;
     overflow: hidden;
     position: relative;
+    align-items: center;
 }
-
 #tituloProcedimento{
-    color: rgba(192, 189, 189, 0.29);
-    font-size: 2rem;
+    color: var(--luxo);
+    font-size: 3rem;
     position: absolute;
     transition: all 0.2s;
     top: 0;
+    z-index: -3;
 }
 .cardProcedimento{
     width: 400px;
-    background-color: #cc8b2b;
+    background-color: var(--luxo);
     padding: 20px;
 }
 .cardProcedimentoContent> img{
-    width: 200px;
-    height: 280px;
-    border-radius: 99px 99px 0 0 ;
-    margin-bottom: 30px;
+    width: 120px;
+    height: 180px;
+    border-radius: 99px 99px 0 0;
+    margin: 0 auto;
 }
 .cardProcedimentoContent{
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: var(--beleza2);
-    gap: 10px;
+    padding: 20px;
+}
+.cardProcedimentoContent > h1{
+    font-family: "Birthstone Bounce", cursive;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--força);
 }
 .cardProcedimentoContent > p {
    text-align: justify;
-   padding: 20px;
 }
+
 .cardProcedimento:last-child{
     margin-bottom: 50px;
+}
+.cardProcedimento:first-of-type{
+    margin-top: 80px;
 }
  /* ---------------------------CONTATO----------------------- */
 #Contato{
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
     background-color: #e9d488;
     background-image: linear-gradient(18deg, #e9d488 0%, #f7f5ef 23%, #f7f5ef 84%);     
 }
@@ -193,11 +201,14 @@ input:checked ~ .menu .ph-x{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: justify;
     gap: 15px;
     color: #a55974;
+    line-height: 1.2rem;
 }
-.informacoesContato p{
-    text-indent: 2rem;
+.informacoesContato>h3{
+    font-weight: 100;
+    font-size: medium;
 }
 .botoesRedesSociais{
     display: flex;
@@ -214,21 +225,25 @@ input:checked ~ .menu .ph-x{
     transition: all .2s ease-out;
 }
 .botoesRedesSociais a:visited{
-    color: var(--força);
+    color: var(--feminilidade2);
 }
 .botoesRedesSociais a:hover{
     color: var(--luxo);
 }
-
 .googleMaps{
     margin:  0 auto 30px auto;
 }
 
 footer{
-    color: #F7E8E0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--beleza);
     padding: 30px;
     background-color: var(--força);
-   box-shadow: rgba(38, 223, 66, 0.652) 0px 10px 10px;
+}
+footer > img{
+    width: 50px;
 }
 
 /* ------------------TELA ACIMA DE 760PX ------------------ */

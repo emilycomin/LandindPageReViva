@@ -6,6 +6,6 @@ document.addEventListener('scroll', function() {
  
 document.addEventListener('scroll', function() {
     let value = window.scrollY
-    let valorFixo = 1000;
-    this.getElementById("tituloProcedimento").style.marginRight = valorFixo - value + "px";
+    let valorFixo = 450;
+    this.getElementById("tituloProcedimento").style.marginRight = valorFixo -value + "px";
    })
