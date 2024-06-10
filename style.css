@@ -45,13 +45,13 @@ header nav{
 }
 header nav a{
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     color: #F7E8E0;
     padding: 1rem;
     transition: all 0.2s ease;
 } 
 header nav a:hover{
-    border-bottom: 1px solid var(--beleza) ;
+    border-bottom: 1px solid var(--beleza);
     transition: all 0.5s ease;
 }
 input:checked ~ nav{
@@ -135,54 +135,90 @@ input:checked ~ .menu .ph-x{
     top:0;
 }
 /* ---------------------------PROCEDIMENTOS------------------------ */
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+.tituloProcedimento{
+    height: 4rem;
+    z-index: -1;
+    position: sticky;
+}
 .procedimentos{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    overflow: hidden;
+    gap: 30px;
     position: relative;
-    align-items: center;
+    z-index: -1;
 }
 #tituloProcedimento{
     color: var(--luxo);
-    font-size: 3rem;
-    position: absolute;
-    transition: all 0.2s;
-    top: 0;
-    z-index: -3;
-}
-.cardProcedimento{
-    width: 400px;
-    background-color: var(--luxo);
+    font-size: 2.5rem;
+    text-align: center;
+    animation: myAnim 2s ease-in 0s 1 normal forwards;
     padding: 20px;
 }
-.cardProcedimentoContent> img{
-    width: 120px;
-    height: 180px;
-    border-radius: 99px 99px 0 0;
-    margin: 0 auto;
+.cardProcedimentos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+.cardProcedimento{
+    background-color: var(--beleza2);
+    border-radius: 20px;
+    background-image: linear-gradient(131.83deg, #f7f5eff8 0%, #f7f5ef 99.21%);
+    position: relative;
+}
+  .cardProcedimento::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    background-image: linear-gradient(312.25deg, #cc8b2b 0%, #cc8c2b84 66.91%);
+    z-index: -1;
+    border-radius: 28px;
 }
 .cardProcedimentoContent{
     display: flex;
-    flex-direction: column;
-    background-color: var(--beleza2);
+    flex-direction: row;
+    gap: 25px;
     padding: 20px;
+    box-shadow: 0 40px 80px var(--beleza2);
+    border-radius: 30px;
 }
-.cardProcedimentoContent > h1{
+
+.cardProcedimentoContent> img{
+    width: 80px;
+    height: 80px;
+    border-radius: 99px 99px 0 0;
+    margin: 0 auto;
+}
+#cardProcedimentoReverse{
+    flex-direction: row-reverse;
+}
+.cardProcedimento > h1{
     font-family: "Birthstone Bounce", cursive;
+    text-align: center;
     font-weight: 500;
-    font-size: 2.5rem;
     color: var(--força);
 }
 .cardProcedimentoContent > p {
-   text-align: justify;
+    text-align: justify;
+    font-size: 0.75rem;
 }
-
 .cardProcedimento:last-child{
     margin-bottom: 50px;
-}
-.cardProcedimento:first-of-type{
-    margin-top: 80px;
 }
  /* ---------------------------CONTATO----------------------- */
 #Contato{
@@ -194,7 +230,7 @@ input:checked ~ .menu .ph-x{
 #Contato>img{
     height: 100px;
     width: 100px;
-    align-self: center;
+    margin: 0 auto;
 }
 .informacoesContato{
     padding: 20px;
@@ -251,13 +287,14 @@ footer > img{
 /* ________________________________HEADER___________________ */
     header{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         align-items: center;
     }
     header nav{
         overflow: visible;
         flex-direction: row;
+    }
+    header nav a{
+        font-size: 1.5rem;
     }
     .imgHeader{
         box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
@@ -275,7 +312,6 @@ footer > img{
     /* ---------------------------BODY------------------------------ */
     #Home{
         height: 100%;
-        margin-bottom: 50px;
     }
     .homeContent{
         width: 80vw;
@@ -301,17 +337,42 @@ footer > img{
     /* ----------------------PROCEDIMENTOS--------------------------- */
     .procedimentos{
        display: flex;
-       flex-flow: row wrap;
-       width: 99%;
-       gap: 50px;
-       margin: 0 auto;
        align-items: center;
-       justify-content: center;
     }
     #tituloProcedimento{
-        font-size: 5rem;
+        font-size: 4rem;
+        animation: myAnim 2s ease-in 0s 1 normal forwards;
     }
-
+    .cardProcedimentos{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+    .cardProcedimento{
+        justify-content: center;
+        width: 400px;
+        background-color: var(--beleza2);
+        border-radius: 20px;
+        position: relative;
+        background-image: linear-gradient(131.83deg, #f7f5eff8 0%, #f7f5ef 99.21%);
+    }
+      .cardProcedimento::before {
+        position: absolute;
+        content: "";
+        top: -5px;
+        bottom: -5px;
+        left: -5px;
+        right: -5px;
+        background-image: linear-gradient(312.25deg, #cc8b2b 0%, #cc8c2b84 66.91%);
+        z-index: -1;
+        border-radius: 28px;
+    }
+    .cardProcedimentoContent{
+        flex-direction: row;
+        box-shadow: 0 40px 80px var(--beleza2);
+        border-radius: 30px;
+    }
     /* ---------------------------------A CLINICA-------------------------- */
     .aReviva{
         height: 300px;
