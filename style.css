@@ -27,9 +27,15 @@ header{
     background-color: var(--força);
     height: 120px;
     display: flex;
-    gap: 30%;
+    gap: 55%;
+    padding: 0 20px;
 }
-
+.imgHeader{
+    height: 150px;
+    width: 150px;
+    border-radius: 0 0 999px 999px;
+    box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
+}
 header nav{
     background-color: #411b28e9;
     position: absolute;
@@ -42,6 +48,7 @@ header nav{
     height:0;
     overflow: hidden;
     transition: 500ms;
+    z-index: 1;
 }
 header nav a{
     text-decoration: none;
@@ -66,7 +73,7 @@ input{
    height: 60px;
    font-size: 4rem;
    margin-top: 50px;
-   z-index: 1;
+   z-index: 2;
 }
 .menu label{
     width: 60px;
@@ -82,45 +89,39 @@ input:checked ~ .menu .ph-list{
 input:checked ~ .menu .ph-x{
     display: block;
 } 
-.imgHeader{
-    height: 150px;
-    width: 150px;
-    border-radius: 0 0 999px 999px;
-    box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
-}
+
 
 /* --------------------------BODY CONTENT------------------------ */
 
 #Home{
-    overflow: hidden;
     background-color: var(--força);
-    height: 400px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 30px 50px;
-    z-index: -1;
-    position: relative;
+    overflow: hidden;
 }
 .homeContent {
-    display: flex;
-    justify-content: space-around;
+    position: relative;
     margin: 0 auto;
+    padding: 50px 0;
+    width: 100vh;
+    display: flex;
+   justify-content: center;
 }
 .texto {
    color: var(--beleza);
    padding: 20px;
    background-color: var(--feminilidade2);
-   top: 30%;
-   position: absolute;
    width: 300px;
-   display: flex;
-   align-items: center;
+   position: absolute;
+   bottom: 30px;
+
 }
 .imagemRenataCapa{
-    height: 300px;
-    margin-left: 50%;
+    height: 400px;
+    margin: 0 auto;
 }
 #ramoDireito, #ramoEsquerdo{
     position: absolute;
@@ -149,7 +150,6 @@ input:checked ~ .menu .ph-x{
 }
 .tituloProcedimento{
     height: 4rem;
-    z-index: -1;
     position: sticky;
 }
 .procedimentos{
@@ -157,7 +157,6 @@ input:checked ~ .menu .ph-x{
     flex-direction: column;
     gap: 30px;
     position: relative;
-    z-index: -1;
 }
 #tituloProcedimento{
     color: var(--luxo);
