@@ -11,9 +11,7 @@
     --beleza: #fcf5e3;
     --beleza2: #f7f5ef;
     --elegancia: #e0bf47;
-
 }
-
 /* ------------------------------MOBILE FIRST -------------- */
 /* ________________________________HEADER___________________ */
 body{
@@ -27,7 +25,7 @@ header{
     background-color: var(--força);
     height: 120px;
     display: flex;
-    gap: 55%;
+    justify-content: space-around;
     padding: 0 20px;
 }
 .imgHeader{
@@ -68,12 +66,11 @@ input{
     display: none;
 }
 .menu{
-    color: var(--beleza);
+    color: #f7f5ef;
    display: block;
    height: 60px;
    font-size: 4rem;
    margin-top: 50px;
-   z-index: 2;
 }
 .menu label{
     width: 60px;
@@ -90,51 +87,40 @@ input:checked ~ .menu .ph-x{
     display: block;
 } 
 
-
 /* --------------------------BODY CONTENT------------------------ */
-
 #Home{
     background-color: var(--força);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-    overflow: hidden;
-}
-.homeContent {
     position: relative;
-    margin: 0 auto;
-    padding: 50px 0;
-    width: 100vh;
-    display: flex;
-   justify-content: center;
+    padding: 20px;
+    z-index: -3;
 }
-.texto {
-   color: var(--beleza);
-   padding: 20px;
-   background-color: var(--feminilidade2);
-   width: 300px;
-   position: absolute;
-   bottom: 30px;
-
-}
-.imagemRenataCapa{
-    height: 400px;
-    margin: 0 auto;
-}
-#ramoDireito, #ramoEsquerdo{
+#Home > img{
     position: absolute;
-    height: 300px;
+    height: 300px;  
 }
- #ramoEsquerdo{
-    left: 0px;
-    bottom: 5px;
+.homeContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.homeContent>img{
+    height: 400px;
+    margin: 4% 0;
+}
+.homeContent h1{
+    background-color: #a5597477;
+    width: 320px;
+    position: absolute;
+    bottom: 8%;
 }
 #ramoDireito{
-    right: 0px;
-    top:0;
+    top: 4%;
+    right:4%;
 }
+#ramoEsquerdo{
+    bottom: 4%;
+}
+
 /* ---------------------------PROCEDIMENTOS------------------------ */
 
 @keyframes myAnim {
@@ -218,6 +204,14 @@ input:checked ~ .menu .ph-x{
 }
 .cardProcedimento:last-child{
     margin-bottom: 50px;
+}
+
+.aReviva{
+    background-color: var(--força);
+    height: 100vh;
+}
+.galeria img{
+    height: 100px;
 }
  /* ---------------------------CONTATO----------------------- */
 #Contato{
