@@ -1,0 +1,163 @@
+
+/* ------------------TELA ACIMA DE 760PX ------------------ */
+@media only screen and (min-width: 960px) {
+    /* ________________________________HEADER___________________ */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      z-index: 777;
+      width: 100%;
+      top: 0;
+    }
+    header nav {
+      overflow: visible;
+      flex-direction: row;
+      position: unset;
+      background: none;
+    }
+    input:checked ~ nav {
+      height: 150px;
+    }
+    header nav a {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    .imgHeader {
+      box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
+      cursor: pointer;
+      height: 200px;
+      width: 200px;
+    }
+    input {
+      display: none;
+    }
+    .menu {
+      display: none;
+    }
+    /* ---------------------------BODY------------------------------ */
+    #Home {
+      height: 100%;
+      margin-top: 150px;
+    }
+    .homeContent {
+      background-image: url(/img/bacgroundReviva.png);
+      background-repeat: repeat-x;
+      background-position: 30px;
+      margin: 20px;
+      gap: 10px;
+    }
+    .texto {
+      width: 300px;
+      height: 250px;
+    }
+    .imagemRenataCapa {
+      height: 480px;
+    }
+    #ramoEsquerdo {
+      left: 10px;
+    }
+    #ramoDireito {
+      right: 10px;
+      top: 0;
+    }
+    /* ----------------------PROCEDIMENTOS--------------------------- */
+    .procedimentos {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      border: solid greenyellow;
+    }
+    #tituloProcedimento {
+      font-size: 4rem;
+      animation: myAnim 2s ease-in 0s 1 normal forwards;
+    }
+    .cardProcedimentos {
+      display: flex;
+      flex-flow: wrap;
+      gap: 20px;
+      justify-content: space-evenly;
+    }
+    .cardProcedimento {
+      justify-content: center;
+      width: 400px;
+      background-color: var(--beleza2);
+      border-radius: 20px;
+      position: relative;
+      background-image: linear-gradient(131.83deg, #f7f5eff8 0%, #f7f5ef 99.21%);
+    }
+    .cardProcedimento::before {
+      position: absolute;
+      content: "";
+      top: -5px;
+      bottom: -5px;
+      left: -5px;
+      right: -5px;
+      background-image: linear-gradient(312.25deg, #cc8b2b 0%, #cc8c2b84 66.91%);
+      z-index: -1;
+      border-radius: 28px;
+    }
+    .cardProcedimentoContent {
+      flex-direction: row;
+      box-shadow: 0 40px 80px var(--beleza2);
+      border-radius: 30px;
+    }
+    /* ---------------------------------A CLINICA-------------------------- */
+    .aReviva {
+      background-color: var(--força);
+    }
+    .aReviva p {
+      width: 70%;
+      font-size: 1.25rem;
+    }
+    .galeria {
+      width: 70%;
+      height: 500px;
+      display: flex;
+      gap: 10px;
+      overflow: hidden;
+    }
+    .galeriaImg {
+      width: 20%;
+      overflow: hidden;
+      cursor: zoom-in;
+      border-radius: 20px;
+      transition: all 0.5s ease;
+    }
+    .galeriaImg:hover {
+      width: 100%;
+    }
+    .galeriaImg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .galeriaImg img:hover {
+      transform: scale(1.2);
+    }
+  
+    /* ---------------------------CONTATO------------------------------- */
+    .informacoesContato{
+      width: 50%;
+    }
+    .informacoesContato p {
+      width: 50%;
+    }
+    #Contato {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+    }
+    .informacoesGoogleMaps {
+      margin: auto 0;
+    }
+    .informacoesGoogleMaps > iframe {
+      width: 450px;
+      height: 350px;
+    }
+  /* -----------------FOOTER ---------------- */
+  
+  
+   */
+  }
