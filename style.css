@@ -41,12 +41,13 @@ header nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     width: 100%;
-    height:0;
+    top: 154px;
+    height: 0;
     overflow: hidden;
     transition: 500ms;
-    z-index: 1;
+    
 }
 header nav a{
     text-decoration: none;
@@ -60,17 +61,17 @@ header nav a:hover{
     transition: all 0.5s ease;
 }
 input:checked ~ nav{
-    height: 100vh;
+    height: 80vh;
 }
 input{
     display: none;
 }
 .menu{
     color: #f7f5ef;
-   display: block;
-   height: 60px;
-   font-size: 4rem;
-   margin-top: 50px;
+    display: block;
+    height: 60px;
+    font-size: 4rem;
+    margin-top: 50px;
 }
 .menu label{
     width: 60px;
@@ -85,7 +86,7 @@ input:checked ~ .menu .ph-list{
 }
 input:checked ~ .menu .ph-x{
     display: block;
-} 
+}
 
 /* --------------------------BODY CONTENT------------------------ */
 #Home{
@@ -141,13 +142,12 @@ input:checked ~ .menu .ph-x{
 }
 .tituloProcedimento{
     height: 4rem;
-    position: sticky;
+
 }
 .procedimentos{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    position: relative;
 }
 #tituloProcedimento{
     color: var(--luxo);
@@ -176,7 +176,7 @@ input:checked ~ .menu .ph-x{
     left: -5px;
     right: -5px;
     background-image: linear-gradient(312.25deg, #cc8b2b 0%, #cc8c2b84 66.91%);
-    z-index: -1;
+    z-index: -7;
     border-radius: 28px;
 }
 .cardProcedimentoContent{
@@ -210,15 +210,32 @@ input:checked ~ .menu .ph-x{
 .cardProcedimento:last-child{
     margin-bottom: 50px;
 }
-
+/* -----------------------------A REVIVA------------------------------ */
 .aReviva{
     background-color: var(--força);
-    height: 100vh;
+    color: #F7E8E0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
 }
+/* }
+.aReviva p{
+    width: 80%;
+}
+.galeria{
+    width: 100%;
+    background-color: #cc8b2b;
+    margin: 0 auto;
+    padding: 20px;
+    column-count: 3;
+}
+
 .galeria img{
-    height: 100px;
-}
- /* ---------------------------CONTATO----------------------- */
+    width: 80%;
+} */
+ /* ----------------------------CONTATO------------------------------------ */
 #Contato{
     display: flex;
     flex-direction: column;
@@ -286,20 +303,30 @@ footer > img{
     header{
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 777;
+        width: 100%;
     }
     header nav{
         overflow: visible;
         flex-direction: row;
+        position: unset;
+        background: none;
+    }
+    input:checked ~ nav {
+        height: 150px;
     }
     header nav a{
         font-size: 1.5rem;
+        font-weight: 500;
     }
     .imgHeader{
         box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
         cursor: pointer;
         height: 200px;
         width: 200px;
-        margin: 50px 0 0 90px;
+        /* margin: 50px 0 0 90px; */
     }
     input{
         display: none;
@@ -309,13 +336,14 @@ footer > img{
     }
     /* ---------------------------BODY------------------------------ */
     #Home{
-        height: 100%;
+        height: 100vh;
     }
     .homeContent{
-        width: 80vw;
         background-image: url(/img/bacgroundReviva.png);
         background-repeat: repeat-x;
         background-position: 30px;
+        margin: 20px;
+        gap: 10px;
     }
     .texto{
         width: 300px;
@@ -326,7 +354,6 @@ footer > img{
     }
     #ramoEsquerdo{
         left: 10px;
-        bottom: 35px;
     }
     #ramoDireito{
         right: 10px;
@@ -336,6 +363,8 @@ footer > img{
     .procedimentos{
        display: flex;
        align-items: center;
+       height: 100vh;
+       padding: 100px;
     }
     #tituloProcedimento{
         font-size: 4rem;
@@ -373,9 +402,38 @@ footer > img{
     }
     /* ---------------------------------A CLINICA-------------------------- */
     .aReviva{
-        height: 300px;
         background-color: var(--força);
     }
+    .aReviva p{
+        width: 70%;
+        font-size: 1.25rem;
+    }
+    .galeria{
+        width:70%;
+        height: 500px;
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+    }
+    .galeriaImg{
+        width: 20%;
+        overflow: hidden;
+        cursor: zoom-in;
+        border-radius: 20px;
+        transition: all 0.5s ease;
+    }
+    .galeriaImg:hover{
+        width: 100%;
+    }
+    .galeriaImg img{
+        width: 100% ;
+        height: 100%;
+        object-fit: cover;
+    }
+    .galeriaImg img:hover{
+        transform: scale(1.2);
+    }
+
     /* ---------------------------CONTATO------------------------------- */
     .mapouter{
         padding: 20px;
