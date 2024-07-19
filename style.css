@@ -163,13 +163,14 @@ input:checked ~ .menu .ph-x {
   width: 100%;
   text-align: center;
   margin: 30px 0;
-  font-size: 3rem;
+  font-size: 1rem;
   animation: myAnim 2s ease-in 0s 1 normal forwards;
 }
 .cardProcedimentos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   padding: 20px;
 }
@@ -330,7 +331,7 @@ input:checked ~ .menu .ph-x {
 }
 .informacoesGoogleMaps iframe{
   height: 350px;
-  width: 450px;
+  max-width: 450px;
 }
 /* --------------------------- FOOTER -------------------------- */
 footer {
