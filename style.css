@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +21,9 @@ body {
   font-family: "Teachers", sans-serif;
 }
 h1 {
-  font-family: "Marcellus", serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+
 }
 header {
   background-color: var(--força);
@@ -109,23 +113,23 @@ input:checked ~ .menu .ph-x {
 }
 .homeContent {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url(./img/bacgroundReviva.png);
   background-repeat: repeat-x;
   background-position: center;
+  height: 450px;
 }
 .homeContent > img {
-  height: 400px;
-  position: relative;
+  height: 450px;
+  position: absolute;
 }
 .homeContent h1 {
   background-color: #a5597477;
-  width: 300px;
-  align-self: center;
-  position: absolute;
-  bottom: 13%;
+  font-size: 3rem;
+  max-width: 300px;
+  position: relative;
+  bottom: -40%;
   color: var(--beleza);
 }
 #ramoDireito {
@@ -150,20 +154,17 @@ input:checked ~ .menu .ph-x {
     transform: translateX(0);
   }
 }
-.tituloProcedimento {
-  height: 4rem;
-}
 .procedimentos {  
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
-#tituloProcedimento {
+.tituloProcedimento {
   color: var(--luxo);
-  font-size: 2.5rem;
+  width: 100%;
   text-align: center;
+  margin: 30px 0;
+  font-size: 3rem;
   animation: myAnim 2s ease-in 0s 1 normal forwards;
-  padding: 20px;
 }
 .cardProcedimentos {
   display: flex;
@@ -214,6 +215,7 @@ input:checked ~ .menu .ph-x {
   text-align: center;
   font-weight: 500;
   color: var(--força);
+  padding-top: 16px;
 }
 .cardProcedimentoContent > p {
   text-align: justify;
@@ -225,26 +227,46 @@ input:checked ~ .menu .ph-x {
 /* -----------------------------A REVIVA------------------------------ */
 .aReviva {
   background-color: var(--força);
-  color: #f7e8e0;
+  color: var(--beleza2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  padding: 36px;
+  width: 100%;
+}
+.aReviva p {
+  width: 70%;
+  text-align: justify;
+  font-size: 1.25rem;
   padding: 20px;
 }
-/* }
-.aReviva p{
-    width: 80%;
+.galeria {
+  width: 60%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+ 
+  gap: 10px;
+  overflow: hidden;
+  flex-shrink: 1;
 }
-.galeria{
-    width: 100%;
-    background-color: #cc8b2b;
-    margin: 0 auto;
-    padding: 20px;
-    column-count: 3;
+.galeriaImg {
+  width: 30%;
+  overflow: hidden;
+  cursor: zoom-in;
+  border-radius: 20px;
+  transition: all 0.5s ease;
 }
-.galeria img{
-    width: 80%;
+/* .galeriaImg:hover {
+  width:50%;
+} */
+.galeriaImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* .galeriaImg img:hover {
+  transform: scale(1);
 } */
 /* ----------------------------CONTATO------------------------------------ */
 #Contato {
@@ -275,7 +297,13 @@ input:checked ~ .menu .ph-x {
 }
 .informacoesContato > h3 {
   font-weight: 100;
-  font-size: medium;
+  font-size: 1rem;
+  text-align: center;
+}
+.informacoesContato p{
+  width: 70%;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
 }
 .botoesRedesSociais {
   display: flex;
@@ -296,6 +324,13 @@ input:checked ~ .menu .ph-x {
 }
 .botoesRedesSociais a:hover {
   color: var(--luxo);
+}
+.informacoesGoogleMaps{
+  margin: 0 auto;
+}
+.informacoesGoogleMaps iframe{
+  height: 350px;
+  width: 450px;
 }
 /* --------------------------- FOOTER -------------------------- */
 footer {
