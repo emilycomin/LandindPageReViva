@@ -40,11 +40,19 @@ h2{
   font-family: "Birthstone Bounce", cursive;
   font-size: 2rem;
 }
+a{
+  text-emphasis: none;
+  text-decoration: none;
+  text-decoration-line: none;
+  -moz-text-decoration-line: none;
+  color: #f7e8e0;
+}
 header {
   background-color: var(--força);
   height: 150px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 0 20px;
   top: 0;
   position: fixed;
@@ -94,7 +102,6 @@ input {
   display: block;
   height: 60px;
   font-size: 4rem;
-  margin-top: 50px;
 }
 .menu label {
   width: 60px;
@@ -110,6 +117,7 @@ input:checked ~ .menu .ph-list {
 input:checked ~ .menu .ph-x {
   display: block;
 }
+
 
 /* --------------------------BODY CONTENT------------------------ */
 #Home {
@@ -168,7 +176,6 @@ input:checked ~ .menu .ph-x {
   text-align: center;
   margin: 30px 0;
   font-size: 3rem;
-  animation: myAnim 2s ease-in 0s 1 normal forwards;
 }
 .cardProcedimentos {
   display: flex;
@@ -183,7 +190,9 @@ input:checked ~ .menu .ph-x {
   border-radius: 20px;
   background-image: linear-gradient(131.83deg, #f7f5eff8 0%, #f7f5ef 99.21%);
   position: relative;
+  margin: auto 0;
   max-width: 400px ;
+  min-height: 370px;
 }
 .cardProcedimento::before {
   position: absolute;
@@ -237,6 +246,9 @@ input:checked ~ .menu .ph-x {
   flex-direction: column;
   align-items: center;
   padding: 36px;
+}
+.aReviva h1{
+  font-size: 3rem;
 }
 .aReviva p {
   width: 70%;
@@ -334,10 +346,37 @@ input:checked ~ .menu .ph-x {
 }
 .informacoesGoogleMaps{
   margin: 0 auto;
+  object-fit: fill;
 }
 .informacoesGoogleMaps iframe{
   height: 350px;
-  max-width: 450px;
+  width: 100%;
+  
+}
+.botaoContatos{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 0;
+}
+.marqueSuaConsulta, .instagram{
+  background-color: var(--luxo);
+  font-family: "Josefin Sans", sans-serif;
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  color: #f7e8e0;
+  border: none;
+  cursor: pointer;
+}
+.marqueSuaConsulta a, .instagram a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.25rem;
+}
+.instagram i, .marqueSuaConsulta i{
+  font-size: 2.5rem;
 }
 /* --------------------------- FOOTER -------------------------- */
 footer {
@@ -351,4 +390,63 @@ footer {
 }
 footer > img {
   width: 50px;
+}
+@media only screen and (min-width: 960px) {
+  header{
+    display: block;
+    height: 140px;
+  }
+  .imgHeader {
+    height: 180px;
+    width: 200px;
+  }
+  header nav{
+    overflow: visible;
+    flex-direction: row;
+    top: 50%;
+    
+  }
+  .menu{
+    display: none;
+  }
+  #Home{
+    margin-top: 140px;
+  }
+  .cardProcedimento{
+    width: 400px ;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .galeria {
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow: hidden;
+  }
+  .galeriaImg {
+    width: 20%;
+    overflow: hidden;
+    cursor: zoom-in;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+  }
+  .galeriaImg:hover {
+    width: 100%;
+  }
+  .galeriaImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .galeriaImg img:hover {
+    transform: scale(1.2);
+  }
+  .botaoContatos{
+   flex-direction: row;
+  }
+
 }
