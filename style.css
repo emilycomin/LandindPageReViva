@@ -20,10 +20,25 @@ body {
   background-color: var(--beleza2);
   font-family: "Teachers", sans-serif;
 }
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-
+  animation: myAnim 2s ease-in 0s 1 normal forwards;
+}
+h2{
+  font-family: "Birthstone Bounce", cursive;
+  font-size: 2rem;
 }
 header {
   background-color: var(--força);
@@ -143,17 +158,6 @@ input:checked ~ .menu .ph-x {
 
 /* ---------------------------PROCEDIMENTOS------------------------ */
 
-@keyframes myAnim {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 .procedimentos {  
   display: flex;
   flex-direction: column;
@@ -163,7 +167,7 @@ input:checked ~ .menu .ph-x {
   width: 100%;
   text-align: center;
   margin: 30px 0;
-  font-size: 1rem;
+  font-size: 3rem;
   animation: myAnim 2s ease-in 0s 1 normal forwards;
 }
 .cardProcedimentos {
@@ -211,7 +215,7 @@ input:checked ~ .menu .ph-x {
 #cardProcedimentoReverse {
   flex-direction: row-reverse;
 }
-.cardProcedimento > h1 {
+.cardProcedimento > h2 {
   font-family: "Birthstone Bounce", cursive;
   text-align: center;
   font-weight: 500;
@@ -233,7 +237,6 @@ input:checked ~ .menu .ph-x {
   flex-direction: column;
   align-items: center;
   padding: 36px;
-  width: 100%;
 }
 .aReviva p {
   width: 70%;
@@ -242,7 +245,7 @@ input:checked ~ .menu .ph-x {
   padding: 20px;
 }
 .galeria {
-  width: 60%;
+  width: 90%;
   height: 500px;
   display: flex;
   flex-wrap: wrap;
@@ -294,7 +297,10 @@ input:checked ~ .menu .ph-x {
   text-align: justify;
   gap: 15px;
   color: #a55974;
-  line-height: 1.2rem;
+}
+.informacoesContato > h1{
+  text-align: center;
+  animation: none;
 }
 .informacoesContato > h3 {
   font-weight: 100;
