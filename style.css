@@ -232,28 +232,31 @@ input:checked ~ .menu .ph-x {
   margin-bottom: 50px;
 }
 /* -----------------------------A REVIVA------------------------------ */
-.aReviva {
-  background-color: var(--força);
+/* .aReviva {
   color: var(--beleza2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 36px;
+} */
+.aReviva h1{
+  padding: 20px;
+  text-align: justify;
 }
 .aReviva p {
-  width: 100%;
+  width: 80%;
   text-align: justify;
   font-size: 1.25rem;
   padding: 20px;
 }
 .galeria {
-  width: 90%;
   height: 500px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   overflow: hidden;
   flex-shrink: 1;
+  margin: 26px 0;
 }
 .galeriaImg {
   width: 30%;
@@ -274,6 +277,28 @@ input:checked ~ .menu .ph-x {
 .galeriaImg img:hover {
   transform: scale(1);
 }
+.sobreRenata{
+  height: 100vh;
+  background-color: var(--força);
+  padding: 0 20%;
+}
+.sobreRenata img{
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+/* Estilos de formatação do P, e titulos junto com informações de contato */
+.fotoRenata{
+  height: 90vh;
+}
+.sobreContent{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
 /* ----------------------------CONTATO------------------------------------ */
 #Contato {
   display: flex;
@@ -286,29 +311,25 @@ input:checked ~ .menu .ph-x {
     #f4edcf 33%,
     #f6f2e4 64%
   );
-  /* #e9d488 0%,
-    #f7f3e3 33%,
-    #f7f5ef 33%, */
 }
-.informacoesContato > img {
+.aReviva > img {
   height: 100px;
   width: 100px;
   margin: 0 auto;
 }
-.informacoesContato {
-  padding: 30px;
+.aReviva, .informacoesContato, .sobreRenata p{
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: justify;
-  gap: 15px;
   color: #a55974;
 }
-.informacoesContato > h1{
+.informacoesContato, .sobreRenata h1{
   text-align: center;
   animation: none;
 }
-.informacoesContato > h3 {
+.informacoesContato, .sobreRenata > h3 {
   font-weight: 100;
   font-size: 1rem;
   text-align: center;
@@ -318,7 +339,6 @@ input:checked ~ .menu .ph-x {
   line-height: 1.5rem;
   font-size: 1.25rem;
 }
-
 .informacoesGoogleMaps iframe{
   height: 350px;
   width: 100%;
@@ -326,6 +346,7 @@ input:checked ~ .menu .ph-x {
 .botaoContatos{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
   padding: 30px 0;
 }
