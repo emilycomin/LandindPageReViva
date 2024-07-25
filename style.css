@@ -197,7 +197,6 @@ input:checked ~ .menu .ph-x {
 }
 .cardProcedimento {
   border-radius: 20px;
-  max-width: 80%;
   box-shadow: 19px 17px 14px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
 }
 .cardProcedimentoContent {
