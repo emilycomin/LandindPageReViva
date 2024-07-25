@@ -1,5 +1,10 @@
+
+let ladoDireito = document.getElementById("ladoDireito");
+let ladoEsquerdo = document.getElementById("ladoEsquerdo");
+
 document.addEventListener('scroll', function() {
  let value = window.scrollY
- this.getElementById("ramoDireito").style.marginLeft = - value + "px";
- this.getElementById("ramoEsquerdo").style.marginRight = value * 1.0 + "px";
+
+ ladoDireito.style.marginRight = - value * 0.3 + "px";
+ ladoEsquerdo.style.marginLeft = - value + 0.3 + "px";
 })
