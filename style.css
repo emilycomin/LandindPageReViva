@@ -72,8 +72,8 @@ header {
   z-index: 777;
 }
 .imgHeader {
-  height: 160px;
-  width: 150px;
+  height: 180px;
+  width: 200px;
   border-radius: 0 0 999px 999px;
   box-shadow: rgba(191, 135, 50, 0.652) 0px 10px 10px;
 }
@@ -232,12 +232,32 @@ input:checked ~ .menu .ph-x {
   margin-bottom: 50px;
 }
 /* -----------------------------A REVIVA------------------------------ */
-/* .aReviva {
-  color: var(--beleza2);
+.sobreRenata{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
+  position: relative;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--força);
+  padding: 0 20%;
+}
+.fotoRenata{
+  height: 100%;
+}
+.sobreContent{
+  position: absolute;
+  background-color: #411c2989;
+  left: 0;
+  color: var(--beleza);
+  top: 50%;
+  width: 100%;
+  height: 50%;
+}
+.sobreContent .registroConselho{
+  text-align: center;
+}
+.ornamentosDourados{
+  height: 80px;
+}
 .aReviva h1{
   padding: 20px;
   text-align: justify;
@@ -277,27 +297,7 @@ input:checked ~ .menu .ph-x {
 .galeriaImg img:hover {
   transform: scale(1);
 }
-.sobreRenata{
-  height: 100vh;
-  background-color: var(--força);
-  padding: 0 20%;
-}
-.sobreRenata img{
-  height: 100%;
-  position: absolute;
-  right: 0;
-}
-/* Estilos de formatação do P, e titulos junto com informações de contato */
-.fotoRenata{
-  height: 90vh;
-}
-.sobreContent{
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: justify;
-}
+
 
 /* ----------------------------CONTATO------------------------------------ */
 #Contato {
@@ -317,7 +317,7 @@ input:checked ~ .menu .ph-x {
   width: 100px;
   margin: 0 auto;
 }
-.aReviva, .informacoesContato, .sobreRenata p{
+.aReviva, .informacoesContato{
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -325,11 +325,11 @@ input:checked ~ .menu .ph-x {
   text-align: justify;
   color: #a55974;
 }
-.informacoesContato, .sobreRenata h1{
+.informacoesContato{
   text-align: center;
   animation: none;
 }
-.informacoesContato, .sobreRenata > h3 {
+.informacoesContato {
   font-weight: 100;
   font-size: 1rem;
   text-align: center;
@@ -389,8 +389,8 @@ footer > img {
 }
 @media only screen and (min-width: 960px) {
   header{
-    display: block;
-    height: 140px;
+    align-items: center;
+    justify-content: space-around;
   }
   .imgHeader {
     height: 180px;
@@ -399,8 +399,12 @@ footer > img {
   header nav{
     overflow: visible;
     flex-direction: row;
-    top: 50%;
-    
+    position: unset;
+    height: auto;
+    justify-content: space-evenly;
+  }
+  header nav a{
+    font-size: 1.75rem;
   }
   .menu{
     display: none;
@@ -408,13 +412,32 @@ footer > img {
   #Home{
     margin-top: 140px;
   }
-  .cardProcedimento{
-    width: 400px ;
-    height: 400px;
-    align-items: center;
-    justify-content: center;
+  .cardProcedimentos{
+    gap: 10%;
+    
   }
-
+  .cardProcedimento{
+    max-width: 500px;
+    margin-bottom: 4%;
+    padding: 20px;
+  }
+  .sobreRenata{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .ornamentosDourados{
+    height: 80px;
+  }
+  .registroConselho{
+    text-align: center;
+  }
+  .sobreContent{
+    color: var(--beleza);
+    align-items: center;
+    width: 50%;
+    gap: 20px;
+  }
   .galeria {
     width: 70%;
     height: 500px;
