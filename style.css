@@ -224,7 +224,6 @@ input:checked ~ .menu .ph-x {
   color: var(--força);
 }
 .cardProcedimentoContent > p {
-  text-align: justify;
   font-size: 1.2rem;
   color: var(--força);
 }
@@ -243,6 +242,7 @@ input:checked ~ .menu .ph-x {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin: 0 250px;
   justify-content: space-between;
 }
 .sobreClinicaCard img{
