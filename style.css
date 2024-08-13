@@ -16,6 +16,10 @@
 }
 /* ------------------------------MOBILE FIRST -------------- */
 /* ________________________________HEADER___________________ */
+html{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--beleza2);
   font-family: "Teachers", sans-serif;
@@ -92,6 +96,7 @@ header nav {
   z-index: -1;
   overflow: hidden;
   transition: 500ms ease-in;
+  border-radius: 20px;
 }
 header nav a {
   text-decoration: none;
