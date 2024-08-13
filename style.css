@@ -82,10 +82,11 @@ header nav {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-content: center;
   gap: 20px;
   width: 70%;
-  top: 150px;
+  top: 90px;
   right: 0;
   height: 0;
   z-index: -1;
@@ -100,6 +101,9 @@ header nav a {
   color: b;
 }
 header nav a:hover {
+  background-color: #f4edcf;
+  color: #411c29;
+  border-radius: 99px;
   border-bottom: 1px solid var(--beleza);
   transition: all 0.5s ease;
 }
@@ -196,6 +200,7 @@ input:checked ~ .menu .ph-x {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  padding: 10px;
 }
 .cardProcedimento {
   border-radius: 20px;
@@ -226,7 +231,7 @@ input:checked ~ .menu .ph-x {
   color: var(--força);
 }
 .cardProcedimentoContent > p {
-  font-size: 1.2rem;
+  
   color: var(--força);
 }
 .cardProcedimento:last-child {
@@ -238,21 +243,24 @@ input:checked ~ .menu .ph-x {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  padding: 16px;
+  width: 100%;
 }
 .sobreClinicaCard{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
-  justify-content: space-between;
-}
-.sobreClinicaCard img{
-  object-fit: scale-down;
-  height: 300px;
+  gap: 10px;
+  padding: 10px;
 }
 .sobreClinicaContent{
-  width: 50%;
+  margin: 30px;
 }
+.sobreClinicaCard img{
+  height: 350px;
+  width: 250px;
+  object-fit: cover;
+}
+
 /* ----------------------------CONTATO------------------------------------ */
 #Contato {
   display: flex;
@@ -385,6 +393,9 @@ footer > img {
   }
   .registroConselho{
     text-align: center;
+  }
+  #cardProcedimentoReverse {
+    flex-direction: row-reverse;
   }
   .sobreContent{
     color: var(--beleza);
